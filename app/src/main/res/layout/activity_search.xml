@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchActivity">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <AutoCompleteTextView
+
+            android:hint="输入关键词搜索"
+            android:layout_weight="0.7"
+        android:layout_width="wrap_content"
+        android:id = "@+id/text"
+        android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_weight="0.3"
+            android:onClick="search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            />
+        <Button
+            android:layout_weight="0.3"
+            android:onClick="recent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/history"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

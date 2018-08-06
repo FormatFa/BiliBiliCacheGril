@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BangumiActivity">
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:background="#000000"
+        android:layout_above="@id/downloadprogress"
+        android:textColor="#ff00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textprogress"/>
+    <ProgressBar
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/downloadprogress"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <ProgressBar
+        android:layout_centerInParent="true"
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_alignParentLeft="true"
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+    <HorizontalScrollView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/seasonslist"
+    />
+    </HorizontalScrollView>
+    </LinearLayout>
+    <ImageView
+        android:layout_below="@id/sc"
+        android:id="@+id/cover"
+        android:layout_width="180dp"
+        android:layout_height="240dp"
+        android:layout_alignParentLeft="true"
+   />
+
+<ScrollView
+
+    android:layout_above="@+id/episodes"
+    android:layout_toRightOf="@id/cover"
+    android:layout_below="@id/sc"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+         /></ScrollView>
+
+    <ListView
+        android:id="@+id/episodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/cover"
+        android:layout_marginTop="25dp" />
+
+
+</RelativeLayout>

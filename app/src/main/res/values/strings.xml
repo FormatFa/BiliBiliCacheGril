@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">哔哩哔哩缓存姬</string>
+
+    <string name="title_activity_down">DownActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>
