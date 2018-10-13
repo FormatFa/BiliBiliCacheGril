@@ -5,4 +5,5 @@
     <item android:title="下载中心" android:id="@+id/download"/>
     <item android:title="关于" android:id="@+id/about"/>
     <item android:title="更新" android:id="@+id/update"/>
+    <item android:title="设置" android:id="@+id/setting"/>
 </menu>

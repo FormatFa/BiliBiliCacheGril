@@ -24,6 +24,7 @@ public class VideoAdapter<T>  extends BaseAdapter{
     {
         ImageView pic;
         TextView title;
+        TextView pubdate;
 
     }
     private Context context;
@@ -60,6 +61,7 @@ public class VideoAdapter<T>  extends BaseAdapter{
 
             holder.pic  = convertView.findViewById(R.id.pic);
             holder.title = convertView.findViewById(R.id.title);
+            holder.pubdate = convertView.findViewById(R.id.pubdate);
             convertView.setTag(holder);
 
 
@@ -76,6 +78,7 @@ public class VideoAdapter<T>  extends BaseAdapter{
 
         System.out.println("ada[ter:"+"http:"+info.getTitle());
         holder.title . setText(position+". "+ info.getTitle());
+        holder.pubdate.setText(info.getPubDate());
 
         return convertView;
     }

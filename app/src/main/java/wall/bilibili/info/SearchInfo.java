@@ -1,5 +1,7 @@
 package wall.bilibili.info;
 
+import wall.bilibili.utils.FormatFaUtils;
+
 public class SearchInfo extends BaseVideoInfo {
     public String title;
     public int bangumi_id;
@@ -7,6 +9,10 @@ public class SearchInfo extends BaseVideoInfo {
 
 public String cover;
 public int season_id;
+
+//上面是番剧的，video的也一起在这处理
+    public int aid;
+    public String pic;
 
     @Override
     public String toString() {
@@ -16,6 +22,8 @@ public int season_id;
                 ", pubdate=" + pubdate +
                 ", cover='" + cover + '\'' +
                 ", season_id=" + season_id +
+                ", aid=" + aid +
+                ", pic='" + pic + '\'' +
                 '}';
     }
 
@@ -32,5 +40,10 @@ public int season_id;
     @Override
     public String getMessage() {
         return null;
+    }
+
+    @Override
+    public String getPubDate() {
+        return FormatFaUtils.stampToStr( pubdate*1000);
     }
 }

@@ -1,6 +1,17 @@
 package wall.bilibili.info;
 
 public class VideoInfo extends BaseVideoInfo {
+
+    private String pub_real_time;
+
+    public String getPub_real_time() {
+        return pub_real_time;
+    }
+
+    public void setPub_real_time(String pub_real_time) {
+        this.pub_real_time = pub_real_time;
+    }
+
     private int comment;
     private int typeid;
     private int play;
@@ -104,6 +115,11 @@ public class VideoInfo extends BaseVideoInfo {
     @Override
     public String getMessage() {
         return null;
+    }
+
+    @Override
+    public String getPubDate() {
+        return pub_real_time;
     }
 
     public void setTitle(String title) {

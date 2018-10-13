@@ -22,12 +22,16 @@ import wall.bilibili.Adapter.VideoAdapter;
 import wall.bilibili.info.DownLoaadEntyInfo;
 import wall.bilibili.ui.FDialog;
 import wall.bilibili.utils.IOUtils;
-
+import android.app.AlertDialog;
+import android.app.AlertDialog.Builder;
+import android.content.DialogInterface;
 public class DownLoadActivity extends Activity implements AdapterView.OnItemLongClickListener,AdapterView.OnItemClickListener {
 
 
     File downloadDir;
 
+    //提取视频输出目录
+    File outDir;
     File[] seasons;
     String dirname = "Android/data/tv.danmaku.bili/download";
     ListView listView;
@@ -157,4 +161,31 @@ public class DownLoadActivity extends Activity implements AdapterView.OnItemLong
         FDialog.simpleDialog(this,"这个页面暂时只供查看》_《");
 
     }
+
+
+    private void options()
+    {
+
+        AlertDialog.Builder ab = new AlertDialog.Builder(this);
+        ab.setItems(new String[]{"提取视频"},new DialogInterface.OnClickListener(){
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+            }
+        }).setNeutralButton("帮助",new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+                FDialog.simpleDialog(DownLoadActivity.this, "Message");
+
+            }
+
+
+        }).show();
+
+
+    }
+
+
 }

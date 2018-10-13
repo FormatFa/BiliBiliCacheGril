@@ -23,3 +23,6 @@
 -dontwarn javax.annotation.**
 -dontwarn org.conscrypt.**
 -dontwarn org.codehaus.**
+-keep class com.baidu.bottom.** { *; }
+-keep class com.baidu.kirin.** { *; }
+-keep class com.baidu.mobstat.** { *; }

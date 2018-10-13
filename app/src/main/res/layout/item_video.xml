@@ -15,7 +15,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/pic"
 
-        android:text="TextView" />
+        android:layout_toRightOf="@+id/pic"
+        android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/pubdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+
+        android:layout_alignParentRight="true"
+        android:text="2018-888" />
 </RelativeLayout>

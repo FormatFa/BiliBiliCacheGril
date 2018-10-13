@@ -20,10 +20,12 @@ public class DownLoaadEntyInfo   extends BaseVideoInfo {
         d.danmaku_count =temp.getAsInt();
 
           try {
+              d.type_tag = object.get("type_tag").getAsString();
               d.downloaded_bytes = object.get("downloaded_bytes").getAsLong();
               d.guessed_total_bytes = object.get("guessed_total_bytes").getAsLong();
               d.prefered_video_quality = object.get("prefered_video_quality").getAsInt();
               d.total_bytes = object.get("total_bytes").getAsLong();
+
           }
           catch (Exception e)
           {
@@ -86,8 +88,14 @@ public class DownLoaadEntyInfo   extends BaseVideoInfo {
     }
 
     @Override
+    public String getPubDate() {
+        return "";
+    }
+
+    @Override
     public String toString() {
         return "DownLoaadEntyInfo{" +
+                "type_tag=" + type_tag +
                 "downloaded_bytes=" + downloaded_bytes +
                 ", guessed_total_bytes=" + guessed_total_bytes +
                 ", total_bytes=" + total_bytes +
@@ -150,6 +158,7 @@ public class DownLoaadEntyInfo   extends BaseVideoInfo {
 
 }
     //下载目录下的entry.json
+    public String type_tag;
     public long downloaded_bytes;
     public long guessed_total_bytes;
     public long total_bytes;

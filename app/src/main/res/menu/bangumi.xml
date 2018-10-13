@@ -2,6 +2,8 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item android:title="查看评论" android:id="@+id/comment" android:icon="@drawable/icon"/>
     <item android:title="信息" android:id="@+id/info" android:icon="@drawable/download" />
 
+    <item android:title="保存封面" android:id="@+id/savecover" android:icon="@drawable/download" />
 </menu>

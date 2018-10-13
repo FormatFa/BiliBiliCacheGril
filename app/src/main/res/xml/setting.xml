@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="loadhead"
+        android:title="加载评论用户头像" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:summary="输出更多有用的信息"
+        android:key="debug"
+        android:title="debug" />
+    <Preference
+        android:defaultValue="false"
+        android:summary="当前版本 1.2"
+        android:key="checkversion"
+        android:title="检测新版本" />
+</PreferenceScreen>

@@ -6,6 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".BangumiActivity">
 
+    <LinearLayout
+        android:layout_alignParentLeft="true"
+        android:id="@+id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+    <HorizontalScrollView
+
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        >
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/seasonslist"
+    />
+    </HorizontalScrollView>
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_below="@id/sc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        >
+
+    <ImageView
+        android:layout_weight="0.3"
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="封面" />
+
+<ScrollView
+    android:layout_weight="0.3"
+    android:id="@+id/messagesc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+
+
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+         /></ScrollView>
+
+    <ListView
+        android:layout_weight="0.3"
+        android:id="@+id/episodes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+
+
+
+
+        android:layout_marginTop="25dp" />
+
+    </LinearLayout>
+
     <TextView
         android:layout_alignParentRight="true"
         android:background="#000000"
@@ -26,60 +95,4 @@
         android:id="@+id/progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <LinearLayout
-        android:layout_alignParentLeft="true"
-        android:id="@+id/sc"
-        android:layout_width="match_parent"
-        android:layout_height="40dp">
-    <HorizontalScrollView
-
-
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        >
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:id="@+id/seasonslist"
-    />
-    </HorizontalScrollView>
-    </LinearLayout>
-    <ImageView
-        android:layout_below="@id/sc"
-        android:id="@+id/cover"
-        android:layout_width="180dp"
-        android:layout_height="240dp"
-        android:layout_alignParentLeft="true"
-   />
-
-<ScrollView
-
-
-    android:layout_above="@+id/episodes"
-    android:layout_toRightOf="@id/cover"
-    android:layout_below="@id/sc"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-
-
-    <TextView
-
-        android:id="@+id/message"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-         /></ScrollView>
-
-    <ListView
-        android:numColumns="2"
-        android:id="@+id/episodes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="50dp"
-        android:layout_alignParentBottom="false"
-        android:layout_below="@+id/cover"
-        android:layout_marginTop="25dp" />
-
-
 </RelativeLayout>

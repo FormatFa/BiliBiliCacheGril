@@ -2,13 +2,25 @@ package wall.bilibili;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.FileObserver;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
+import java.io.IOException;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 public class MainActivity extends Activity  {
+
 
     // Used to load the 'native-lib' library on application startup.
     static {
@@ -34,7 +46,14 @@ public class MainActivity extends Activity  {
         BObserver b = new BObserver("/storage/emulated/0/Android/data/tv.danmaku.bili/download/s_1657/30019/lua.flv.bb2api.80/index.json");
         b.startWatching();
         tv.setText(stringFromJNI());
+        
+        
+
+
     }
+
+
+
 
     /**
      * A native method that is implemented by the 'native-lib' native library,
