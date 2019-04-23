@@ -573,8 +573,8 @@ public class SearchActivity extends Activity implements AdapterView.OnItemClickL
         {
 
             AlertDialog.Builder ab = new AlertDialog.Builder(this);
-            ab.setMessage("版本1.3 \n自动检测到您的视频缓存地址为:"+ storageDir.getAbsolutePath()+"\n\nB站视频缓存工具\n\n这版本增加查看评论\n\n添加后，请重启哔哩哔哩（任务栏划掉它，再不行重启手机）\n\n" +
-                    "只支持番剧和电视剧解析，不支持单个视频\n\n可以选择缓存到B站或者本地\n1.缓存到b站就是在B战的下载管理可以看到，可以看弹幕\n\n2.缓存到本地，就是本地自定义的目录\n\n下版本待更新：提取缓存视频");
+            ab.setTitle("2019-4-23 1.4").setMessage("版本1.4 \n自动检测到您的视频缓存地址为:"+ storageDir.getAbsolutePath()+"\n\n长按章节查看评论B站视频缓存工具\n\n紧急修复\n\n添加后，请重启哔哩哔哩（任务栏划掉它，再不行重启手机）\n\n" +
+                    "只支持番剧和电视剧解析，不支持单个视频\n\n可以选择缓存到B站或者本地\n1.缓存到b站就是在B战的下载管理可以看到，可以看弹幕\n\n2.缓存到本地，就是本地自定义的目录\n\n下版本待更新：提取缓存视频 \nBy FormatFa");
 
             ab.setPositiveButton("切换目录", new DialogInterface.OnClickListener() {
                 @Override
@@ -597,7 +597,7 @@ switchPaht();
         }
         else if(item.getItemId()==R.id.update)
         {
-            Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://api.formatfa.top/bilibili/index.php?ver=3"));
+            Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://api.formatfa.top/bilibili/index.php?ver=4"));
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);

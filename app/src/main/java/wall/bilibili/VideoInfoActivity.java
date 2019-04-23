@@ -15,6 +15,8 @@ public class VideoInfoActivity extends Activity {
         initData();
     }
 
+
+
     private void initData() {
 
         list = findViewById(R.id.videolist);

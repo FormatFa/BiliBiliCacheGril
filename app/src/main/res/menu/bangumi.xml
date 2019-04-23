@@ -6,4 +6,5 @@
     <item android:title="信息" android:id="@+id/info" android:icon="@drawable/download" />
 
     <item android:title="保存封面" android:id="@+id/savecover" android:icon="@drawable/download" />
+    <item android:title="下载全部" android:id="@+id/downloadall" android:icon="@drawable/download" />
 </menu>

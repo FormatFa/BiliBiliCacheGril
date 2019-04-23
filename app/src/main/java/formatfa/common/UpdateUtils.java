@@ -21,6 +21,7 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import wall.bilibili.ui.FDialog;
 import wall.bilibili.utils.IOUtils;
 
 public class UpdateUtils {
@@ -37,6 +38,7 @@ public class UpdateUtils {
             nowVersion = info.versionName;
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
+            Toast.makeText(context,e.toString(),Toast.LENGTH_LONG).show();
         }
         newVersionFile = new File( context.getExternalFilesDir(Environment.MEDIA_MOUNTED),"new.apk");
     }
@@ -155,7 +157,13 @@ public class UpdateUtils {
         protected void onPostExecute(String s) {
             if(s==null)
             {
-                Toast.makeText(context,"无需更新.",Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"错误",Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if(s.startsWith("yi"))
+            {
+                //Toast.makeText(context,"无需更新.",Toast.LENGTH_SHORT).show();
+                FDialog.simpleDialog(context,s);
             return;
             }
             confirmDownload(s);
@@ -172,15 +180,15 @@ public class UpdateUtils {
         protected String doInBackground(String... strings) {
 
 
-            String data = IOUtils.download(confAddress);
+            String data = IOUtils.download(confAddress,null);
             if(data==null)return  null;
             String [] datas = data.split("cccc");
 
-            if(datas.length<2)return null;
+            if(datas.length<3)return null;
 
             if(datas[0].equals(nowVersion))
             {
-                return null;
+                return datas[2];
             }
             return datas[1];
 

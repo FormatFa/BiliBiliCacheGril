@@ -12,7 +12,7 @@
         android:title="debug" />
     <Preference
         android:defaultValue="false"
-        android:summary="当前版本 1.2"
+        android:summary="当前版本 1.4"
         android:key="checkversion"
-        android:title="检测新版本" />
+        android:title="检测新版本或者查看下缓存姬的最新资讯" />
 </PreferenceScreen>

@@ -113,47 +113,48 @@ public class B {
     }
 
     //伪造缓存文件
-    public static File addToCache(File down,String season_id,int epid,String type,String cover,String title,int cid,int av_id,EpInfo epInfo,boolean iscomplete)
+ //   public static File addToCache(File down,String season_id,int epid,String type,String cover,String title,int cid,int av_id,EpInfo epInfo,boolean iscomplete)
+    public static File addToCache(File down, String season_id,int epid,String data)
     {
-
-        //s_xxx文件夹
+//
+//        //s_xxx文件夹
         File seasonDir = new File(down,"s_"+season_id);
         if(!seasonDir.exists())seasonDir.mkdirs();
 
-
-        //entry.json
-        JSONObject jo = new JSONObject();
-        try {
-            jo.put("type_tag",type);
-            jo.put("season_id",season_id);
-            jo.put("cover",cover);
-            jo.put("title",title);
-            JSONObject source = new JSONObject();
-            //ource":{"website":"bangumi","cid":3346118,"av_id":2166324}
-            source.put("website","bangumi");
-            source.put("cid",cid);
-            source.put("av_id",av_id);
-            jo.put("source",source);
-            jo.put("is_completed",iscomplete);
-            /*\
-            {"index":"1","cover":"http:\/\/i0.hdslb.com\/bfs\/bangumi\/9418fbb4ea075dae7bfc1d2800f7bc0e63fe8794.jpg","page":1,"season_type,"is_completed":false,"time_update_stamp":1533385439000}
-             */
-            JSONObject  ep = new JSONObject();
-            ep.put("index",epInfo.index);
-            ep.put("cover",epInfo.cover);
-            ep.put("page",epInfo.page);
-
-            ep.put("episode_id",epInfo.ep_id);
-            ep.put("av_id",epInfo.aid);
-            ep.put("from","bangumi");
-            ep.put("index_title",epInfo.index_title);
-            jo.put("ep",ep);
-
-        } catch (JSONException e) {
-
-        }
-
-
+//
+//        //entry.json
+//        JSONObject jo = new JSONObject();
+//        try {
+//            jo.put("type_tag",type);
+//            jo.put("season_id",season_id);
+//            jo.put("cover",cover);
+//            jo.put("title",title);
+//            JSONObject source = new JSONObject();
+//            //ource":{"website":"bangumi","cid":3346118,"av_id":2166324}
+//            source.put("website","bangumi");
+//            source.put("cid",cid);
+//            source.put("av_id",av_id);
+//            jo.put("source",source);
+//            jo.put("is_completed",iscomplete);
+//            /*\
+//            {"index":"1","cover":"http:\/\/i0.hdslb.com\/bfs\/bangumi\/9418fbb4ea075dae7bfc1d2800f7bc0e63fe8794.jpg","page":1,"season_type,"is_completed":false,"time_update_stamp":1533385439000}
+//             */
+//            JSONObject  ep = new JSONObject();
+//            ep.put("index",epInfo.index);
+//            ep.put("cover",epInfo.cover);
+//            ep.put("page",epInfo.page);
+//
+//            ep.put("episode_id",epInfo.ep_id);
+//            ep.put("av_id",epInfo.aid);
+//            ep.put("from","bangumi");
+//            ep.put("index_title",epInfo.index_title);
+//            jo.put("ep",ep);
+//
+//        } catch (JSONException e) {
+//
+//        }
+//
+//
 
         //下面的ep文件夹
         File epDir = new File(seasonDir,String.valueOf(epid));
@@ -162,7 +163,7 @@ public class B {
 
 
         File entryFile = new File(epDir, "entry.json");
-        IOUtils.writeString(entryFile.getAbsolutePath(),jo.toString());
+        IOUtils.writeString(entryFile.getAbsolutePath(),data);
 
 
         return  epDir;

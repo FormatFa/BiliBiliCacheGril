@@ -177,12 +177,12 @@ public class RepliesInfo {
         this.parent = parent;
         this.jsonObject = jsonObject;
 
-        System.out.println(parent+" " + jsonObject);
+       // System.out.println(parent+" " + jsonObject);
         //第一个的没有s
         if(parent!=null) {
             JsonObject memberjson = jsonObject.getAsJsonObject("member");
 
-
+           //System.out.println("reply info:"+jsonObject);
             member = new member();
             member.setAvatar(memberjson.get("avatar").getAsString());
             member.setDisplayRank(memberjson.get("DisplayRank").getAsInt());
@@ -207,7 +207,8 @@ public class RepliesInfo {
             vip.setVipType(vipjson.get("vipType").getAsInt());
             message = jsonObject.get("content").getAsJsonObject().get("message").getAsString();
 
-            floor = jsonObject.get("floor").getAsInt();
+            //floor = jsonObject.get("floor").getAsInt();
+            floor=-1;
             count = jsonObject.get("count").getAsInt();
 
 

@@ -19,7 +19,7 @@ import java.io.File;
 public class IOUtils {
 
 
-    public	static String download(String url)
+    public	static String download(String url,File saveTo)
     {
 
         String result = null;
@@ -54,7 +54,12 @@ public class IOUtils {
         catch (IOException e)
         {}
 
+        if(saveTo!=null)
+        {
 
+        writeString(saveTo.getAbsolutePath(),result);
+
+        }
 
 
         return result;

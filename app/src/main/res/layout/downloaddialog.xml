@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="离线缓存"
+            android:id="@+id/cache"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:id="@+id/memory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/cache"
+            android:text="(剩余310m)" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/close" />
+    </RelativeLayout>
+<LinearLayout
+    android:layout_below="@id/toolbar"
+    android:orientation="horizontal"
+    android:id="@+id/quatity"
+    android:layout_height="wrap_content"
+    android:layout_width ="match_parent"
+    >
+<TextView
+
+    android:layout_width="match_parent"
+    android:text="加载中..."
+    android:id="@+id/status"
+    android:layout_height="wrap_content" />
+</LinearLayout>
+</RelativeLayout>
